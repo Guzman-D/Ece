@@ -1,7 +1,14 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 import json
-app=FastAPI()
+app=FastAPI(
+	title="API de Programación Agéntica - EPII Diurno",
+        description="Elaborado por David Guzman",
+        version="1.0.0.",
+        contact={
+                "name": "David Guzman",
+                "email": "daguzmand@ul.edu.co",
+        } )
 @app.get("/")
 def initialEndpoint():
 	return {"message":"Hola mundo"}
